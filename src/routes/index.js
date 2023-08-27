@@ -8,5 +8,5 @@ export default createRouter([
   { path: '#/', component: Home },
   { path: '#/movie', component: Movie },
   { path: '#/about', component: About },
-  { path: '.{0,}', component: NotFound },
+  { path: '.*', component: NotFound },
 ])
