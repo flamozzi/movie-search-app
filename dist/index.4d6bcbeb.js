@@ -839,6 +839,8 @@ var _movie = require("./Movie");
 var _movieDefault = parcelHelpers.interopDefault(_movie);
 var _about = require("./About");
 var _aboutDefault = parcelHelpers.interopDefault(_about);
+var _notFound = require("./NotFound");
+var _notFoundDefault = parcelHelpers.interopDefault(_notFound);
 exports.default = (0, _core.createRouter)([
     {
         path: "#/",
@@ -851,10 +853,14 @@ exports.default = (0, _core.createRouter)([
     {
         path: "#/about",
         component: (0, _aboutDefault.default)
+    },
+    {
+        path: ".{0,}",
+        component: (0, _notFoundDefault.default)
     }
 ]);
 
-},{"../core/core":"3SuZC","./Home":"0JSNG","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","./Movie":"1LTyN","./About":"gdB30"}],"0JSNG":[function(require,module,exports) {
+},{"../core/core":"3SuZC","./Home":"0JSNG","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","./Movie":"1LTyN","./About":"gdB30","./NotFound":"4fDiL"}],"0JSNG":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _core = require("../core/core");
@@ -1178,6 +1184,23 @@ class About extends (0, _core.Component) {
 }
 exports.default = About;
 
-},{"../core/core":"3SuZC","../store/about":"4RAJO","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["f3BSW","gLLPy"], "gLLPy", "parcelRequire6588")
+},{"../core/core":"3SuZC","../store/about":"4RAJO","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"4fDiL":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _core = require("../core/core");
+class NotFound extends (0, _core.Component) {
+    render() {
+        this.el.classList.add("container", "not-found");
+        this.el.innerHTML = /* html */ `
+      <h1>
+        Sorry..<br>
+        Page not found.
+      </h1>
+    `;
+    }
+}
+exports.default = NotFound;
+
+},{"../core/core":"3SuZC","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["f3BSW","gLLPy"], "gLLPy", "parcelRequire6588")
 
 //# sourceMappingURL=index.4d6bcbeb.js.map
