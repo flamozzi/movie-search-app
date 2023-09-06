@@ -1,6 +1,5 @@
 {
   "compilerOptions": {
-    "rootDir": "./src", // 소스 파일 안에서 root 폴더를 명시
     "outDir": "./build/js", // ts 컴파일 후에 어느 경로로 들어가는지 명시
     "target": "ES2015", // 타입스크립트를 ES2015 버전의 자바스크립트로 변환
     "noEmitOnError": true, // 파일에 에러가 있을 때는 컴파일하지 않는 옵션
