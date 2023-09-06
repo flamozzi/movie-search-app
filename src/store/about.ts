@@ -1,6 +1,15 @@
 import { Store } from '../core/core'
 
-export default new Store({
+interface State {
+  photo: string
+  name: string
+  email: string
+  blog: string
+  github: string
+  repository: string
+}
+
+export default new Store<State>({
   photo:
     'https://velog.velcdn.com/images/flamozzi/profile/25a35fbc-f5f4-4fc0-ad83-10ce51a69267/image.png',
   name: 'flamozzi / ParkJiSung',
